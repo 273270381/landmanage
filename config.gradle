@@ -1,0 +1,124 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            minSdkVersion    : 19,
+            targetSdkVersion : 30,
+            versionCode      : 12,
+            versionName      : "1.1.1"
+    ]
+
+    dependVersion = [
+            // supportSdkVersion: "28.0.0",
+            retrofit : "2.4.0",
+            glide    : "4.12.0",
+            rxJava   : "2.2.2",
+            rxAndroid: "2.1.0",
+            rxKotlin : "2.3.0",
+            anko     : "0.10.7"
+    ]
+
+    androidxDeps = [
+            "appcompat"       : 'androidx.appcompat:appcompat:1.2.0',
+            "material"        : 'com.google.android.material:material:1.2.1',
+            "constraintlayout": 'androidx.constraintlayout:constraintlayout:2.0.4',
+            "androidx-core"   : 'androidx.core:core-ktx:1.3.2',
+            "recyclerview"    : "androidx.recyclerview:recyclerview:1.2.0",
+    ]
+
+    retrofit = [
+            "retrofit"                : "com.squareup.retrofit2:retrofit:${dependVersion.retrofit}",
+            "retrofitConverterGson"   : "com.squareup.retrofit2:converter-gson:${dependVersion.retrofit}",
+            "retrofitAdapterRxjava2"  : "com.squareup.retrofit2:adapter-rxjava2:${dependVersion.retrofit}",
+            "okhttp3LoggerInterceptor": 'com.squareup.okhttp3:logging-interceptor:3.11.0',
+            "retrofitConverterMoshi"  : 'com.squareup.retrofit2:converter-moshi:2.4.0',
+            "retrofitKotlinMoshi"     : "com.squareup.moshi:moshi-kotlin:1.7.0"
+    ]
+
+    rxJava = [
+            "rxJava"   : "io.reactivex.rxjava2:rxjava:${dependVersion.rxJava}",
+            "rxAndroid": "io.reactivex.rxjava2:rxandroid:${dependVersion.rxAndroid}",
+            "rxKotlin" : "io.reactivex.rxjava2:rxkotlin:${dependVersion.rxKotlin}",
+            "anko"     : "org.jetbrains.anko:anko:${dependVersion.anko}"
+    ]
+
+    testDeps = [
+            "junit"                    : 'junit:junit:4.12',
+            "runner"                   : 'androidx.test.ext:junit:1.1.1',
+            "espresso-core"            : 'androidx.test.espresso:espresso-core:3.1.0',
+            "leakcanary-debug"         : 'com.squareup.leakcanary:leakcanary-android:1.6.1',
+            "leakcanary-release"       : 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1',
+            "leakcanary-debug-fragment": 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1',
+            "debug-db"                 : 'com.amitshekhar.android:debug-db:1.0.4'
+    ]
+
+    dialog = [
+            //dialog
+            "dialogs:lifecycle"         : "com.afollestad.material-dialogs:lifecycle:3.3.0",
+            "dialogs:core"              : "com.afollestad.material-dialogs:core:3.3.0",
+            "dialogs:color"             : "com.afollestad.material-dialogs:color:3.3.0",
+            "dialogs:datetime"          : "com.afollestad.material-dialogs:datetime:3.3.0",
+            "dialogs:bottomsheets"      : "com.afollestad.material-dialogs:bottomsheets:3.3.0"
+    ]
+
+    commonDeps = [
+            "glide"                 : "com.github.bumptech.glide:glide:${dependVersion.glide}",
+            "banner"                : 'cn.bingoogolapple:bga-banner:2.2.4@aar',
+            "agentweb"              : 'com.just.agentweb:agentweb:4.0.2',
+            "multidex"              : 'com.android.support:multidex:1.0.3',
+            "vertical-tablayout"    : 'q.rorbin:VerticalTabLayout:1.2.5',
+            //流式布局
+            "flow-layout"           : 'com.hyman:flowlayout-lib:1.1.2',
+//            "eventbus"              : 'org.greenrobot:eventbus:3.1.1',
+            // 指定tinker依赖版本（注：应用升级1.3.5版本起，不再内置tinker）
+            "crashreport"           : 'com.tencent.bugly:crashreport_upgrade:latest.release',
+            "nativecrashreport"     : 'com.tencent.bugly:nativecrashreport:latest.release',
+            'tinker'                : 'com.tencent.tinker:tinker-android-lib:1.9.14',
+            //右划退出
+            "swipeback"             : 'com.cxz:swipeback:1.0.1',
+            "logger"                : 'com.orhanobut:logger:2.1.1',
+            "litepal"               : 'org.litepal.android:core:2.0.0',
+            "fab"                   : 'com.github.clans:fab:1.6.4',
+            "materialdatetimepicker": 'com.wdullaer:materialdatetimepicker:3.6.4',
+            //屏幕适配
+            "android-autosize"      : 'me.jessyan:autosize:1.1.0',
+            "spinkit"               : 'com.github.ybq:Android-SpinKit:1.2.0',
+            //微信开源项目，替代SP
+            "mmkv"                  : 'com.tencent:mmkv:1.0.22',
+            //管理界面状态库
+            "loadsir"               : 'com.kingja.loadsir:loadsir:1.3.8',
+            //防崩溃
+            "crash"                 : 'cat.ereza:customactivityoncrash:2.3.0',
+            //util
+            "utilcodex"             : 'com.blankj:utilcodex:1.26.0',
+            //轮播图
+            "BannerViewPager"       : 'com.github.zhpanvip:BannerViewPager:3.1.5',
+            "BottomNavigationViewEx": 'com.github.ittianyu:BottomNavigationViewEx:2.0.4',
+            "baiduMap"              : 'com.baidu.lbsyun:BaiduMapSDK_Map:7.4.0',
+            "baiduMap-tool"         : 'com.baidu.lbsyun:BaiduMapSDK_Util:7.4.0',
+//            "baiduMap-location"     : 'com.baidu.lbsyun:BaiduMapSDK_Location:9.1.8',
+            "SlidingUpPanelLayout"  : 'com.sothree.slidinguppanel:library:3.4.0',
+            "MPAndroidChart"        : 'com.github.PhilJay:MPAndroidChart:v3.1.0',
+            "MagicIndicator"        : 'com.github.hackware1993:MagicIndicator:1.7.0',
+            "swiperefreshlayout"    : 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0',
+            "recyclerview"          : 'com.yanzhenjie.recyclerview:x:1.3.2',
+            "RevealLayout"          : 'com.github.goweii:RevealLayout:1.1.1',
+            "AdapterHelper"         : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4',
+            "PickerView"            : 'com.contrarywind:Android-PickerView:4.1.9',
+            "rxpermissions2"           : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar',
+            "ezviz-sdk"             : 'io.github.ezviz-open:ezviz-sdk:4.16.6.3',
+            "PhotoView"             : 'com.github.chrisbanes:PhotoView:2.0.0',
+            "spinner"               :'com.jaredrummler:material-spinner:1.3.1'
+    ]
+
+    annotationProcessorDeps = [
+            "glide-compiler": "com.github.bumptech.glide:compiler:${dependVersion.glide}"
+    ]
+
+    androisxLibs = androidxDeps.values()
+    networkLibs = retrofit.values()
+    rxJavaLibs = rxJava.values()
+    commonLibs = commonDeps.values()
+    dialogLibs = dialog.values()
+    annotationProcessorLibs = annotationProcessorDeps.values()
+}

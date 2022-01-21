@@ -1,0 +1,4 @@
+rootProject.name = "LandManage"
+include ':app'
+include ':JetpackMvvm'
+include ':library'

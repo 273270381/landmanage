@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.suchness.landmanage.ui.fragment.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.suchness.landmanage.ui.fragment.HomeFragment"
+        android:label="homeFragment"/>
+
+    <fragment
+        android:id="@+id/realPlayFragment"
+        android:name="com.suchness.landmanage.ui.fragment.RealPlayFragment"
+        android:label="RealPlayFragment"/>
+
+    <fragment
+        android:id="@+id/testFragement"
+        android:name="com.suchness.landmanage.ui.fragment.TestFragment"
+        android:label="TestFragment"/>
+
+    <fragment
+        android:id="@+id/monitorfragemnt"
+        android:name="com.suchness.landmanage.ui.fragment.MonitorFragment"
+        android:label="monitorfragment"/>
+
+    <fragment
+        android:id="@+id/playbackfragment"
+        android:name="com.suchness.landmanage.ui.fragment.PlaybackFragment"
+        android:label="playbackfragment" />
+
+    <fragment
+        android:id="@+id/alarmdetailfragment"
+        android:name="com.suchness.landmanage.ui.fragment.AlarmDetailFragment"
+        android:label="detailfragment"/>
+
+    <fragment
+        android:id="@+id/preview_pic_fragment"
+        android:name="com.suchness.landmanage.ui.fragment.PreviewPicFragment"
+        android:label="preview_pic_fragment"/>
+
+    <fragment
+        android:id="@+id/file_contansfragment"
+        android:name="com.suchness.landmanage.ui.fragment.FileContansFragment"
+        android:label="file_contansfragment"/>
+
+    <fragment
+        android:id="@+id/preview_file_fragment"
+        android:name="com.suchness.landmanage.ui.fragment.PreviewFileFragment"
+        android:label="preview_file_fragment"/>
+
+    <action
+        android:id="@+id/action_to_realPlayFragment"
+        app:destination="@id/realPlayFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+        android:id="@+id/action_to_testFragement"
+        app:destination="@id/testFragement"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+        android:id="@+id/action_to_playbackfragment"
+        app:destination="@id/playbackfragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+        android:id="@+id/action_to_detailfragment"
+        app:destination="@id/alarmdetailfragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+        android:id="@+id/action_to_preview_pic_fragment"
+        app:destination="@id/preview_pic_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+        android:id="@+id/action_to_file_contansfragment"
+        app:destination="@id/file_contansfragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+    <action
+        android:id="@+id/action_to_preview_file_fragment"
+        app:destination="@id/preview_file_fragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"/>
+
+</navigation>

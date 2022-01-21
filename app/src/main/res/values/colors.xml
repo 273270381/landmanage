@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00696A</color>
+    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorAccent">@color/Cyan</color>
+    <color name="textColorPrimary">#616161</color>
+    <color name="viewBackground">@color/White</color>
+    <color name="windowBackground">@color/Grey100</color>
+    <color name="line_divider">@color/Grey300</color>
+    <color name="list_divider">@color/Grey400</color>
+    <color name="mask_color">#f5f5f5</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="login_color">#3FE5E3</color>
+    <color name="common_bg">#f0f0f3</color>
+    <color name="background">#d8d8d8</color>
+    <color name="colorBlack666">#666</color>
+    <color name="colorBlack333">#333</color>
+
+
+    <!-- item -->
+    <color name="common_color">#19191B</color>
+    <color name="item_title">#19191B</color>
+    <color name="item_author">@color/Grey700</color>
+    <color name="item_desc">@color/Grey600</color>
+    <color name="item_time">@color/Grey600</color>
+    <color name="item_date">@color/Grey600</color>
+    <color name="item_chapter">@color/Grey600</color>
+    <color name="item_tag_tv">#ffFFFFFF</color>
+    <color name="item_nav_color_tv">#19191B</color>
+    <color name="color_title_bg">#CCFFFFFF</color>
+    <color name="color_about_tv">@color/Grey600</color>
+    <color name="transparent_75">#00000000</color>
+    <color name="vertical_tab_layout_bg">@color/Grey100</color>
+    <color name="vertical_tab_layout_indicator_color">@color/White</color>
+    <color name="item_flow_layout_bg">@color/Grey200</color>
+    <color name="arrow_color">@color/Grey700</color>
+    <color name="sticky_header_bg">@color/Grey100</color>
+    <color name="txt_color">#48495F</color>
+    <color name="blue_bg">#344173</color>
+    <color name="black_bg">#000000</color>
+
+
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="Red">#f44336</color>
+    <color name="Pink">#e91e63</color>
+    <color name="Purple">#9c27b0</color>
+    <color name="Deep_Purple">#673ab7</color>
+    <color name="Indigo">#3f51b5</color>
+    <color name="Blue">#2196f3</color>
+    <color name="Light_Blue">#03a9f4</color>
+    <color name="Cyan">#00bcd4</color>
+    <color name="Teal">#009688</color>
+    <color name="Green">#4caf50</color>
+    <color name="Light_Green">#8bc34a</color>
+    <color name="Lime">#cddc39</color>
+    <color name="Yellow">#ffeb3b</color>
+    <color name="Amber">#ffc107</color>
+    <color name="Orange">#ff9800</color>
+    <color name="Deep_Orange">#ff5722</color>
+    <color name="Brown">#795548</color>
+    <color name="Grey">#9e9e9e</color>
+    <color name="Blue_Grey">#607d8b</color>
+
+
+    <color name="Gray">#cccccc</color>
+    <color name="Grey50">#FAFAFA</color>
+    <color name="Grey100">#F5F5F5</color>
+    <color name="Grey200">#EEEEEE</color>
+    <color name="Grey300">#E0E0E0</color>
+    <color name="Grey400">#bdbdbd</color>
+    <color name="Grey500">#9e9e9e</color>
+    <color name="Grey600">#757575</color>
+    <color name="Grey700">#616161</color>
+    <color name="Grey800">#424242</color>
+    <color name="Grey900">#212121</color>
+
+
+
+    <color name="colorGray">#333</color>
+    <color name="accent">#E91E63</color>
+    <color name="login_bg_color_pressure">#59DAE0</color>
+    <color name="login_bg_color_unpressure">#154248</color>
+
+    <!-- 新版登录模块-->
+    <color name="login_line_color">#33ffffff</color>
+    <color name="login_input_active">#31b968</color>
+    <color name="login_other_color">#cacaca</color>
+    <color name="account_input_bg_color">#55616161</color>
+    <color name="account_lock_bg">#ff43815c</color>
+    <color name="account_lock_font_color">#00E4FB</color>
+    <color name="account_input_color">#c9c9c9</color>
+    <color name="account_pressed_true">#003540</color>
+    <color name="bg_press">#ebebeb</color>\
+    <color name="bg_press_material">#d4d4d4</color>
+    <color name="black_alpha_240">#f0000000</color>
+
+    <!--droDownMenu-->
+    <color name="drop_down_selected">#6EDBA2</color>
+    <color name="un_press_color">#9C27B0</color>
+    <color name="drop_down_unselected">#111111</color>
+
+    <color name="viewfinder_frame">#929292</color>
+    <color name="dark_bg_70p">#bb000000</color>
+    <color name="common_sub_text">#888888</color>
+    <color name="a1_blue_color">#1ea1ff</color>
+    <color name="a1_orange_color">#ff7e00</color>
+    <color name="my_list_deviver">#b2b2b2</color>
+    <color name="corsor_color">#adadad</color>
+    <color name="quality_focused_color">#448cf3</color>
+    <color name="source_detection_btn_color">#48a9fb</color>
+    <color name="preview_quality_color">#3eaefa</color>
+
+    <color name="more_color">#3ea6ef</color>
+    <color name="scan_yellow">#e56b19</color>
+    <color name="tv_my_blue">#1b9ee2</color>
+    <color name="auto_wifi_tip_red">#FF4000</color>
+    <color name="add_title_text_color">#666666</color>
+    <color name="help_link">#527ddb</color>
+    <color name="opensdk_cameralist_bg">#f0f0f1</color>
+    <color name="on_off_text_selector">#5d27d4</color>
+    <color name="grouplayout_item_bg_sel">#f3f4f5</color>
+
+    <color name="Lightgray">#07171016</color><!--浅灰 -->
+    <color name="z_white">#FFFFFF</color>
+    <color name="z_white_border">#B3AAAA</color>
+    <color name="colorBlack">#ff000000</color>
+    <color name="play_translucent_bg">#c0000000</color>
+    <color name="remotelist_item_duration_text_color">#c6c6c6</color>
+    <color name="ez_c1">#1E90FF</color>
+    <color name="c1">#f37f4c</color>
+</resources>

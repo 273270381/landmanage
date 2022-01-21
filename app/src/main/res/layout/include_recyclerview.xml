@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <merge>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <com.suchness.landmanage.app.weight.dropDownMenu.DropDownMenu
+                android:id="@+id/dropdown_menu"
+                app:ddmenuTextSize="13sp"
+                app:ddtextUnselectedColor="@color/drop_down_unselected"
+                app:ddtextSelectedColor="@color/drop_down_selected"
+                app:dddividerColor="@color/Grey"
+                app:ddunderlineColor="@color/Grey"
+                app:ddmenuMenuHeightPercent="0.5"
+                app:ddmenuSelectedIcon="@mipmap/dropdown"
+                app:ddmaskColor="@color/mask_color"
+                app:ddmenuBackgroundColor="@color/white"
+                app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </merge>
+</layout>

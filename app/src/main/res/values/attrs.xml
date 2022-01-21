@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="popupTextAlignment" format="enum">
+        <enum name="start" value="0" />
+        <enum name="end" value="1" />
+        <enum name="center" value="2" />
+    </attr>
+
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="arrowDrawable" format="reference|color" />
+        <attr name="dropDownListPaddingBottom" format="dimension" />
+        <attr name="backgroundSelector" format="integer" />
+        <attr name="textTint" format="color" />
+        <attr name="popupTextAlignment" />
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DropDownMenu">
+        <attr name="ddunderlineColor" format="color"/>
+        <attr name="dddividerColor" format="color"/>
+        <attr name="ddtextSelectedColor" format="color"/>
+        <attr name="ddtextUnselectedColor" format="color"/>
+        <attr name="ddmenuBackgroundselectedColor" format="color"/>
+        <attr name="ddmenuBackgroundColor" format="color"/>
+        <attr name="ddmaskColor" format="color"/>
+        <attr name="ddmenuTextSize" format="dimension"/>
+        <attr name="ddmenuSelectedIcon" format="reference"/>
+        <attr name="ddmenuUnselectedIcon" format="reference"/>
+        <attr name="ddmenuMenuHeightPercent" format="float"/>
+    </declare-styleable>
+    <declare-styleable name="LoadingTextView">
+        <attr name="textStyle">
+            <enum name="noText" value="-1" />
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="gravity" format="integer" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <attr name="textColor" />
+        <attr name="background" format="reference" />
+        <attr name="backButton" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer"/>
+        <attr name="stroke_width" format="dimension"/>
+        <attr name="color_tick" format="color"/>
+        <attr name="color_checked" format="color"/>
+        <attr name="color_unchecked" format="color"/>
+        <attr name="color_unchecked_stroke" format="color"/>
+    </declare-styleable>
+</resources>

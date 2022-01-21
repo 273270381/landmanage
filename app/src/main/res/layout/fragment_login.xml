@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.suchness.landmanage.viewmodel.LoginRegisterViewModel" />
+
+        <variable
+            name="click"
+            type="com.suchness.landmanage.ui.fragment.LoginFragment.ProxyClick" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@mipmap/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <include layout="@layout/include_toolbar" />-->
+
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <TextView
+                android:id="@+id/title"
+                android:layout_centerInParent="true"
+                android:textSize="40sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginBottom="@dimen/dp_20"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_height="0dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_login_username_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_username" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="22dp"
+                    android:background="@color/login_bg_color_unpressure" />
+
+                <EditText
+                    android:id="@+id/et_login_username"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ems="15"
+                    android:focusable="true"
+                    android:hint="@string/login_input_username_hint"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="@={viewmodel.userName}"
+                    android:textColor="@color/login_bg_color_pressure"
+                    android:textColorHint="@color/login_bg_color_unpressure"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/sp_16" />
+
+                <ImageView
+                    android:id="@+id/iv_login_username_del"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:contentDescription="@null"
+                    android:onClick="@{()->click.clear()}"
+                    android:scaleType="fitCenter"
+                    android:visibility="@{viewmodel.clearVisible}"
+                    android:src="@mipmap/ic_clear" />
+            </LinearLayout>
+            <View
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/login_bg_color_unpressure"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_login_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_login_pwd_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginRight="14dp"
+                    android:contentDescription="@null"
+                    android:src="@mipmap/ic_password" />
+
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="22dp"
+                    android:background="@color/Grey900" />
+
+                <EditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:text="@={viewmodel.password}"
+                    bind:showPwd="@{viewmodel.isShowPwd}"
+                    android:textColor="@color/login_bg_color_pressure"
+                    android:textColorHint="@color/login_bg_color_unpressure"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/sp_16" />
+
+                <CheckBox
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:button="@drawable/keyvisibily_selector"
+                    android:checked="false"
+                    android:visibility="@{viewmodel.passwordVisible}"
+                    bind:checkChange="@{click.onCheckedChangeListener}" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@color/login_bg_color_unpressure"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:gravity="right"
+                    android:textSize="@dimen/sp_16"
+                    android:text="@string/remenber_password"
+                    android:textColor="@color/login_bg_color_pressure"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <CheckBox
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:button="@drawable/keyremenber_selector"
+                    android:checked="@{viewmodel.isRemeberPassword()}"
+                    bind:checkChange="@{click.toggleRemenberPassword}" />
+            </LinearLayout>
+
+
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:background="@drawable/bg_login_submit"
+                bind:noRepeatClick="@{()-> click.login()}"
+                android:elevation="0dp"
+                android:outlineProvider="none"
+                android:text="@string/login"
+                android:textColor="@color/login_color"
+                android:textSize="@dimen/sp_18"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <GridView
+            android:id="@+id/constellation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:horizontalSpacing="3dp"
+            android:verticalSpacing="2dp"
+            android:numColumns="4" />
+
+        <GridView
+            android:id="@+id/constellation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:horizontalSpacing="3dp"
+            android:numColumns="3"
+            android:verticalSpacing="2dp" />
+
+        <RelativeLayout
+            android:layout_margin="@dimen/dp_5"
+            android:background="@drawable/bg_relativelayout"
+            android:padding="@dimen/dp_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/spinner"
+                app:ms_text_color="@color/black"
+                android:textSize="@dimen/sp_16"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_height="40dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/dp_3"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/startTime"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:hint="开始时间"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/dp_3"
+                android:layout_gravity="center"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:hint="结束时间"
+                    android:layout_height="match_parent"/>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_3"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_text_dropdown"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="取消"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_3"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_text_dropdown"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="确定"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <View
+            android:background="@color/Grey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"/>
+    </LinearLayout>
+</layout>

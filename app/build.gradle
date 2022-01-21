@@ -1,0 +1,132 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+// 依赖 tinker 插件脚本
+apply from: 'tinker-support.gradle'
+
+android {
+    signingConfigs {
+        release {
+            storeFile file('D:\\android\\Key_store\\landmanage.jks')
+            storePassword '123456'
+            keyAlias 'key'
+            keyPassword '123456'
+        }
+    }
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.suchness.landmanage"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters  'armeabi','armeabi-v7a'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'CheckResult'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true // 自动清理无用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            android.applicationVariants.all{variant ->
+                variant.outputs.all {
+                    outputFileName = "app-release.apk"
+                }
+            }
+            signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LGPL2.1'
+        pickFirst  'lib/arm64-v8a/libgnustl_shared.so'
+        pickFirst  'lib/armeabi-v7a/libgnustl_shared.so'
+    }
+
+    dexOptions {
+        dexInProcess true
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs' //this way we can find the .aar file in libs folder
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation'com.jakewharton:butterknife:10.0.0'
+    kapt 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation project(path: ':JetpackMvvm')
+    implementation project(path: ':library')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation(name: 'arcgis-android-v10.2.9', ext: 'aar')
+    implementation files('libs\\httpclient-1.0.0.jar')
+    testImplementation rootProject.ext.testDeps["junit"]
+    androidTestImplementation rootProject.ext.testDeps["runner"]
+    androidTestImplementation rootProject.ext.testDeps["espresso-core"]
+
+    // leakCanary
+    debugImplementation rootProject.ext.testDeps["leakcanary-debug"]
+    releaseImplementation rootProject.ext.testDeps["leakcanary-release"]
+    debugImplementation rootProject.ext.testDeps["debug-db"]
+    implementation rootProject.ext.androisxLibs
+    // 网络请求库
+    implementation rootProject.ext.networkLibs
+    // RxJava2
+    implementation rootProject.ext.rxJavaLibs
+    implementation rootProject.ext.commonLibs
+    implementation rootProject.ext.dialogLibs
+
+    // APT dependencies(Kotlin内置的注解处理器)
+    kapt rootProject.ext.annotationProcessorLibs
+
+}

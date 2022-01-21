@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="md_corner_radius">12dp</item>
+    </style>
+
+    <style name="FullscreenThemse" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorAccent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--<item name="android:windowBackground">@mipmap/start_second</item>-->
+    </style>
+    <style name="LoadingTextView">
+        <item name="textStyle">vertical</item>
+        <item name="textColor">@color/Grey500</item>
+        <item name="textSize">12sp</item>
+        <item name="textPadding">5dp</item>
+        <item name="android:text">@string/loading_text_default</item>
+    </style>
+    <style name="LoadingTextView_Percent" parent="LoadingTextView">
+        <item name="textPadding">10dp</item>
+        <item name="textSize">15sp</item>
+        <item name="android:text"/>
+    </style>
+    <style name="TitleBar_Dark">
+        <item name="textColor">@android:color/white</item>
+        <item name="background">@color/dark_bg_70p</item>
+        <item name="backButton">@drawable/message_back_selector</item>
+    </style>
+    <style name="popwindowUpAnim">
+        <item name="android:windowEnterAnimation">@anim/fade_up</item>
+        <item name="android:windowExitAnimation">@anim/fade_down</item>
+    </style>
+</resources>

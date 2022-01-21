@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="click"
+            type="com.suchness.landmanage.ui.fragment.MapChildFragment.MapClick" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:visibility="visible"
+            android:id="@+id/maplayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.esri.android.map.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <ImageButton
+                android:id="@+id/info_ibtn"
+                android:layout_marginTop="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/imagebutton_info_selector"
+                android:onClick="@{()->click.showInfo()}"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+
+            <ImageButton
+                android:id="@+id/measure_ibtn"
+                android:layout_below="@+id/info_ibtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:onClick="@{()->click.measurement()}"
+                android:background="@drawable/liangsuan"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+
+            <ImageButton
+                android:id="@+id/zoom_in_ibtn"
+                android:layout_below="@+id/measure_ibtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:onClick="@{()->click.zoonIn()}"
+                android:background="@drawable/imagebutton_zoomin_selector"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <ImageButton
+                android:id="@+id/zoom_out_ibtn"
+                android:layout_below="@+id/zoom_in_ibtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:onClick="@{()->click.zoonOut()}"
+                android:background="@drawable/imagebutton_zoomout_selector"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <!--        <ImageButton-->
+            <!--            android:id="@+id/position_ibtn"-->
+            <!--            android:layout_below="@+id/zoom_out_ibtn"-->
+            <!--            android:layout_marginTop="20dp"-->
+            <!--            android:layout_marginRight="20dp"-->
+            <!--            android:layout_alignParentRight="true"-->
+            <!--            android:onClick="@{()->click.robotDevice}"-->
+            <!--            android:background="@drawable/imagebutton_robot_selector"-->
+            <!--            android:layout_width="40dp"-->
+            <!--            android:layout_height="40dp" />-->
+
+            <ImageButton
+                android:id="@+id/localtion_ibtn"
+                android:layout_below="@+id/zoom_out_ibtn"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/imagebutton_location_selector"
+                bind:noRepeatClick="@{()->click.location()}"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#60000000"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:text="西区"
+                android:id="@+id/title_tv"
+                android:textColor="@color/Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/progressLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/downloadProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/dp_50"
+                android:layout_marginEnd="16dp"
+                android:max="100"
+                />
+            <TextView
+                android:id="@+id/downloadProgress"
+                android:layout_below="@+id/downloadProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/dp_30"
+                android:layout_alignParentRight="true"
+                android:text="0%"
+                />
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/downloadtext"
+                android:layout_below="@+id/downloadProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="正在下载，请稍后..."
+                />
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_alarm"
+        android:checked="true"
+        android:icon="@drawable/menu_main"
+        android:title="@string/bottom_name1" />
+
+    <item
+        android:id="@+id/menu_tif"
+        android:icon="@drawable/menu_project"
+        android:title="@string/bottom_name2" />
+
+    <item
+        android:id="@+id/menu_monitor"
+        android:icon="@drawable/menu_tree"
+        android:title="@string/bottom_name3" />
+    <item
+        android:id="@+id/menu_file"
+        android:icon="@drawable/menu_file"
+        android:title="@string/bottom_name4" />
+
+</menu>
